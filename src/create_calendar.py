@@ -44,6 +44,9 @@ from extract_necessary_data import load_html    # Local module: parse HTML → C
 
 COOKIES = "cookies.json" 
 
+# Ensure output folder exists
+os.makedirs("output", exist_ok=True)
+
 # Directories
 BASE_DIR = os.path.dirname(__file__)
 DATA_DIR = os.path.join(BASE_DIR, "..", "data")
