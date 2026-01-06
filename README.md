@@ -17,6 +17,8 @@ This project aims to simplify match scheduling and reduce the risk of missed or 
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
+    - [Step 0: Setup your cookies.json](#step-0-setup-your-cookiesjson)
+    - [Step 1: Run the main script](#step-1-run-the-main-script)
   - [Project Structure](#project-structure)
   - [Requirements](#requirements)
   - [Contributing](#contributing)
@@ -61,6 +63,22 @@ pip install -r requirements.txt
 ---
 
 ## Usage
+
+### Step 0: Setup your cookies.json
+
+Before running the script, you need to provide a `cookies.json` file containing your login cookies from the official basketball website.
+
+1. Go to [https://aabrq.ca/](https://aabrq.ca/) and log in with your credentials.
+2. Install the browser extension **EditThisCookie (V3)** (only needs to be done once).
+3. Click on the extension icon, then click **Export** to copy your cookies.
+4. In Visual Studio Code, navigate to the `data/` folder in the project.
+5. Create a file named `cookies.json` and paste the exported value from the extension.
+
+> ⚠️ Make sure `cookies.json` is **kept private**. It is ignored by Git and should **never be pushed to GitHub**.
+
+---
+
+### Step 1: Run the main script
 
 Run the main script to generate the calendar file:
 ```bash
