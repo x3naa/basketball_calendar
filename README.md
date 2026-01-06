@@ -77,6 +77,8 @@ After execution:
 > `cookies.json` contains authentication data exported from your browser and should **never be committed** to version control.  
 > Add it to `.gitignore`.
 
+All generated files (HTML, CSV, and `.ics`) are written to the `output/` directory.
+
 ---
 
 ## Project Structure
@@ -87,10 +89,11 @@ basketball_calendar/
 ├── src/
 │   ├── __init__.py                 # empty, just to make `src` a Python package
 │   ├── create_calendar.py          # main script
-│   ├── import_data.py              # existing module
-│   └── extract_necessary_data.py   # existing module
+│   ├── import_data.py              # fetches protected HTML pages
+│   └── extract_necessary_data.py   # parses HTML into CSV files
 │
 ├── data/                           # user-provided input
+│   ├── .gitkeep                    # Git tracks this, folder exists
 │   └── cookies.json
 │
 ├── output/                         # auto-generated HTML, CSV, ICS
